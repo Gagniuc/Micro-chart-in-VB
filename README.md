@@ -4,7 +4,7 @@ This compact chart takes into account both positive and negative values from an 
 
 ![screenshot](https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/chart_short.png?raw=true)
 
-The second chart project shows an addition to the first, namely it draws the <kbd>x-axis</kbd> and <kbd>y-axis</kbd>, and the corresponding baseline ticks. The screenshot below shows the output of the function:
+The second chart project shows an addition to the first, namely it draws the <kbd>x-axis</kbd> and <kbd>y-axis</kbd>, and the corresponding baseline ticks. Also, the position of the chart can be changed inside the object with the help of four variables responsible for the vertical position, the horizontal position, the width of the chart and the height of the chart. The screenshot below shows the output of the function:
 
 ![screenshot](https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/chart.png?raw=true)
 
