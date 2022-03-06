@@ -4,23 +4,20 @@ This compact chart takes into account both positive and negative values from an 
 
 ![screenshot](https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/chart_short.png?raw=true)
 
-This output contains three different signals, each with a different color (red, black, blue):
-The screenshot below shows the output of the function:
+The second chart project shows an addition to the first, namely it draws the <kbd>x-axis</kbd> and <kbd>y-axis</kbd>, and the corresponding baseline ticks. The screenshot below shows the output of the function:
 
 ![screenshot](https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/chart.png?raw=true)
 
-Live: https://gagniuc.github.io/World-smallest-js-chart-v2.0/
-
-How does it work? The Chart function contains a loop that makes a number of iterations (<i>i</i>) equal to the number of terms present in the sequence (<i>s</i>). Inside the main loop, the coordinates above the canvas object are calculated based on the maximum value, namely according to the value found in the <i>mx</i> variable. Thus, the <kbd>y-axis</kbd> is represented by the height (<i>h</i>) of the canvas object divided by the value in the <i>mx</i> variable (<i>h</i>/<i>mx</i>), and the result is multiplied by the current value in the sequence (s[<i>i</i>]). To position the zero values at the bottom of the chart, the <kbd>y-axis</kbd> is reversed by subtracting the result (the <i>y</i> value) from the height (<i>h</i>) of the canvas object. However, for a better visualization, the implementation of this chart narrows the <kbd>y-axis</kbd> and shows only the region between the two values. To obtain this relative reduction, the minimum value was taken into account. Thus, the following change was made to the previous Chart 1.0 function, namely:
+How does it work? The Chart function contains a loop that makes a number of iterations (<i>i</i>) equal to the number of terms present in the sequence (<i>s</i>). Inside the main loop, the coordinates above the canvas object are calculated based on the maximum value, namely according to the value found in the <i>mx</i> variable. Thus, the <kbd>y-axis</kbd> is represented by the height (<i>h</i>) of the PictureBox object divided by the value in the <i>mx</i> variable (<i>h</i>/<i>mx</i>), and the result is multiplied by the current value in the sequence (s[<i>i</i>]). To position the zero values at the bottom of the chart, the <kbd>y-axis</kbd> is reversed by subtracting the result (the <i>y</i> value) from the height (<i>h</i>) of the PictureBox object. However, for a better visualization, the implementation of this chart narrows the <kbd>y-axis</kbd> and shows only the region between the two values. To obtain this relative reduction, the minimum value was taken into account, namely:
 
 <img src="https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/ylu.png?raw=true" height="100">
 
-In contrast, the <kbd>x-axis</kbd> is calculated by dividing the length of the canvas object by the total number of terms in the sequence (<b>w/s.length</b>), and the
+In contrast, the <kbd>x-axis</kbd> is calculated by dividing the length of the PictureBox object by the total number of terms in the sequence (<b>w/s.length</b>), and the
 result is multiplied by the iteration number (<i>i</i>):
 
 <img src="https://github.com/Gagniuc/World-shortest-chart-in-VB6/blob/main/img/x.png?raw=true" height="100">
 
-Where <i>mn</i> is the minimum value and <i>mx</i> is the maximum value found over the signal (consecutive numeric values spaced by delimiters), <i>h</i> is the canvas height, and s[<i>i</i>] is the current value from the input. Note that the inner workings of the Chart function were fully described for the [previous implementations](https://github.com/Gagniuc/World-smallest-js-chart-v1.0). This concludes the changes related to the Chart function.
+Where <i>mn</i> is the minimum value and <i>mx</i> is the maximum value found over the input (the consecutive numeric values spaced by delimiters), <i>h</i> is the PictureBox height, and s[<i>i</i>] is the current value from the input. Note that the inner workings of the Chart function were fully described in a [previous JS implementation](https://github.com/Gagniuc/World-smallest-js-chart-v1.0). This concludes the changes related to the Chart function.
 
 ```
 Function chart(g, c, e)
