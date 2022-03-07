@@ -19,7 +19,7 @@ result is multiplied by the iteration number (<i>i</i>):
 
 Where <i>mn</i> is the minimum value and <i>mx</i> is the maximum value found over the input (the consecutive numeric values spaced by delimiters), <i>h</i> is the PictureBox height, and s[<i>i</i>] is the current value from the input. Note that the inner workings of the <kbd>chart</kbd> function were fully described in a [previous JS implementation](https://github.com/Gagniuc/World-smallest-js-chart-v1.0). This concludes the changes related to the <kbd>chart</kbd> function.
 
-```
+```vb6
 Function chart(g, c, e)
 
     sig = Split(g, ",")
@@ -67,7 +67,7 @@ End Function
 
 The lines below show how this <kbd>Chart</kbd> function from above can be called:
 
-```
+```vb6
 A = "0,0.14,0.29,0.45,0.64,0.86,1.14,1.53,2.13,3.27,6.41,75.31,7.75,3.61,2.29,1.62,1.2,0.9,0.67,0.48,0.32,0.17,0.03,0.12,0.26,0.42,0.6,0.81,1.08,1.44,2,2.99,5.45,25.09,9.79,4.03,2.47,1.72,1.27,0.95,0.71,0.52,0.35,0.2,0.05,0.09,0.23,0.39,0.56,0.77,1.02,1.36,1.87,2.74,4.74,15.04,13.27,4.54,2.67,1.83,1.34"
 
 Call chart(A, vbRed, "|")
